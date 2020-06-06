@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Counter Increment and Decrement with Changing Color</title>  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+</head>
+<body style="padding: 20px">
+    <div class="container text-center d-flex justify-content-center align-items-center flex-column" style="height: 100vh">
+
+    <h1 class="display-3 text-danger mb-4">Counter Increment/ Decrement <br> 
+      <span class="display-4">with Changing Color</span>
+    </h1>
+
+    <div id="counter" class="display-1"></div>
+
+    <div>
+      <button class="btn btn-sm btn-danger my-4" id="btnIncrement">Increase Number</button>
+      <button class="btn btn-sm btn-danger my-4" id="btnDecrement">Decrease Number</button>
+    </div>
+
+</div>
+<script>            
+    btnIncrement = document.getElementById("btnIncrement")
+    btnDecrement = document.getElementById("btnDecrement")
+
+    counter = document.getElementById("counter")
+    counter.style.fontWeight = 'bold'
+
+    count = 0;
+
+    counter.innerHTML = count;
+
+    btnIncrement.addEventListener('click', numIncrement)
+    btnDecrement.addEventListener('click', numDecrement)
+
+    function numIncrement(){
+      count++;
+      counter.innerHTML = count;
+      if(count>0){
+        counter.style.color = 'green'
+      }
+    }
+
+    function numDecrement(){
+      count--;
+      counter.innerHTML = count;
+      if(count<0){
+        counter.style.color = 'red'
+      }
+    }
+</script>
+</body>
+</html>
