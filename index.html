@@ -1,54 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Counter Increment and Decrement with Changing Color</title>  
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <meta charset="UTF-8">
+  <title>Javascript: Counter Increment and Decrement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@700;800;900&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS Styles -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body style="padding: 20px">
-    <div class="container text-center d-flex justify-content-center align-items-center flex-column" style="height: 100vh">
+<body>
+  <div class="wrapper">
+    <div class="container">
 
-    <h1 class="display-3 text-danger mb-4">Counter Increment/ Decrement <br> 
-      <span class="display-4">with Changing Color</span>
-    </h1>
+      <h1 class="display-3 text-danger">Counter Increment/ Decrement</h1>
+      <p class="lead">Click the two buttons to Increase & Decrease the Number 🙂!</p>
 
-    <div id="counter" class="display-1"></div>
-
-    <div>
-      <button class="btn btn-sm btn-danger my-4" id="btnIncrement">Increase Number</button>
-      <button class="btn btn-sm btn-danger my-4" id="btnDecrement">Decrease Number</button>
-    </div>
-
-</div>
-<script>            
-    btnIncrement = document.getElementById("btnIncrement")
-    btnDecrement = document.getElementById("btnDecrement")
-
-    counter = document.getElementById("counter")
-    counter.style.fontWeight = 'bold'
-
-    count = 0;
-
-    counter.innerHTML = count;
-
-    btnIncrement.addEventListener('click', numIncrement)
-    btnDecrement.addEventListener('click', numDecrement)
-
-    function numIncrement(){
-      count++;
-      counter.innerHTML = count;
-      if(count>0){
-        counter.style.color = 'green'
-      }
-    }
-
-    function numDecrement(){
-      count--;
-      counter.innerHTML = count;
-      if(count<0){
-        counter.style.color = 'red'
-      }
-    }
-</script>
+      <div class="text-center mt-5">      
+        <div id="counter" class="display-1"></div>
+  
+        <div>
+          <button class="btn btn-danger my-4" id="btnDecrement">Decrease Number</button>
+          <button class="btn btn-danger my-4" id="btnIncrement">Increase Number</button>          
+        </div>
+      </div>
+  </div>
+  </div>    
+<script src="script.js"></script>
 </body>
 </html>
